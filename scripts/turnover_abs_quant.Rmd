@@ -376,23 +376,14 @@ head(XLA_T5_RT0_Abs)
 ```
 
 
-Citation for fly absolute concentrations:
+Total protein anchors for fly absolute concentrations:
 
-110 mg of protein in mature oocyte
-80 mg at Stage 5
-60 mg at hatching
+Medina & Vallejo (1989) Int J Dev Biol 33:403-405, Figure 1 (Bradford):
+approximately 0.8 ug total protein per embryo at the start of the labeling window
+(~3 h post-fertilization) and approximately 0.6 ug per embryo at hatching
+(a decrease of ~25% across the window).
 
 https://ijdb.ehu.eus/article/pdf/2518452
-https://link.springer.com/content/pdf/10.1007/BF00848689.pdf
-
--> Total protein decreases by ~25% at hatching from window start
-
-1.8 ug total protein at start
-1.35 ug total protein at end
-
-Trying:
-0.8 ug total protein at start
-0.6 ug total protein at end
 
 
 ```{r Splitting yolk and nonyolk fly protein for absolute estimation }
