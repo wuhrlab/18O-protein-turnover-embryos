@@ -1,0 +1,20 @@
+{
+  "title": "Proteome-wide quantification of protein turnover in frog and fly embryos reveals divergent strategies of maternal inheritance: analysis code and data",
+  "upload_type": "software",
+  "description": "Analysis scripts (R Markdown), rendered analysis documents, raw search outputs, intermediate files, reference tables and supplementary tables for 18O-water labeling proteomics of Xenopus laevis and Drosophila melanogaster embryos. Mass spectrometry data are deposited in PRIDE under PXD081127 and PXD084487.",
+  "creators": [
+    {"name": "Cruz, Edward R.", "affiliation": "Princeton University"},
+    {"name": "Marishta, Argit", "affiliation": "Princeton University"},
+    {"name": "Bao, Gloria", "affiliation": "Princeton University"},
+    {"name": "Johnson, Alexander N. T.", "affiliation": "Princeton University"},
+    {"name": "Keber, Felix C.", "affiliation": "Princeton University"},
+    {"name": "Pujari, Vyas", "affiliation": "Princeton University"},
+    {"name": "Ivanov, Daniil", "affiliation": "Princeton University"},
+    {"name": "Neinast, Michael", "affiliation": "Princeton University"},
+    {"name": "Kirschner, Marc W.", "affiliation": "University of California, Berkeley; Harvard Medical School"},
+    {"name": "Rabinowitz, Joshua D.", "affiliation": "Princeton University"},
+    {"name": "Wieschaus, Eric", "affiliation": "Princeton University"},
+    {"name": "Wühr, Martin", "affiliation": "Princeton University"}
+  ],
+  "keywords": ["protein turnover", "embryonic development", "quantitative proteomics", "18O metabolic labeling", "Xenopus laevis", "Drosophila melanogaster"]
+}

@@ -8,7 +8,9 @@ This repository contains the data, intermediate files, reference tables, and ana
 
 The mass spectrometry proteomics data have been deposited to the ProteomeXchange consortium via the PRIDE partner repository under accessions **PXD081127** (DDA) and **PXD084487** (DIA). Compressed copies of the raw search outputs are also included here under `raw/Data/` so the full pipeline can be re-run without retrieving the deposit separately.
 
-**This is a large repository (approximately 800 MB).** It bundles the compressed raw mass spectrometry files and DIA-NN reports so the analysis is self-contained, which makes cloning slower than a code-only repository. If you only want to read the code and results, browse the rendered documents in `analysis/` directly on GitHub without cloning.
+The supplementary tables of the paper (Tables S1–S7) are included as `raw/Files/Supp_Tables/Supplementary_Tables_S1-S7.xlsx`.
+
+**This is a large repository (about 1.2 GB on disk, ~800 MB to download).** It bundles the compressed raw mass spectrometry files and DIA-NN reports so the analysis is self-contained, which makes cloning slower than a code-only repository. If you only want to read the code and results, browse the rendered documents in `analysis/` directly on GitHub without cloning.
 
 ## Repository structure
 
@@ -66,3 +68,14 @@ Session and package versions are recorded at the end of each rendered document.
 **"MBT" in script and file names.** Some scripts, figure folders, and intermediate files are labeled `MBT` for historical reasons. An earlier version of the study measured a different developmental window, and although the manuscript text uses the updated naming (gastrulation), the scripts were never renamed. Any `MBT` label in this repository refers to the gastrulation timeseries.
 
 **FASTA files.** Protein search databases are split across `raw/Files/Reference/` and `raw/Files/FASTA/` (with a `DIA-NN/` subfolder) for historical reasons. The frog database was moved to `Files/FASTA/` when it was updated mid-project and the fly database was left in `Files/Reference/`, so scripts read from both. The current frog and fly databases are included in both folders for completeness, and the contaminant-containing versions under `DIA-NN/` are those used for the DIA-NN searches, which require them. Database choice does not affect the reported results.
+
+**Normalization reference set.** The *Xenopus* proteins used as the normalization anchor (Table S1) are provided as `raw/Data/XLA_Norm/XLA-O18_YolkNormSet_T8-NYS-Decay.csv` and are read by the model-fitting documents. `Frog_GB_NYS-Proteomics` writes its candidate list to `raw/Data/XLA_Norm/XLA-O18_YolkNormSet_T8-NYS-Decay_candidates.csv`.
+
+**Random seeds.** *k*-means clustering, the permutation null used for the ΔBIC threshold, and the fgsea enrichment tests involve random sampling; the scripts set seeds (`set.seed(123)`, `clusterSetRNGStream(cl, 123)`) so that repeat runs are stable.
+
+## Software versions
+
+- R 4.5.3; package versions are printed by `sessionInfo()` at the end of every rendered document (e.g. minpack.lm 1.2-4, fgsea 1.36.2, dplyr 1.2.0, ggplot2 4.0.3).
+- Peptide identification and reporter-ion quantification (RTS-MS3 and DDA data) were performed with GFY, licensed from Harvard University; search parameters are given in the Methods and the filtered outputs are in `raw/Data/`.
+- DIA data were searched with DIA-NN v2.5.0 (settings in the Methods); the DIA-NN reports are in `raw/Data/DIA/`.
+- Single-copy orthologues between *X. laevis* and *D. melanogaster* were identified with OrthoFinder and are provided as the pair table `raw/Data/XLA-Dmel_orthologue_pairs.csv`.
