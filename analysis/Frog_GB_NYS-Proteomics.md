@@ -1590,8 +1590,11 @@ plot_proteins(frog_yolk_set, GB_FinalNorm_Merge)
 ![](figures/Frog_GB_NYS-Proteomics/Visualizing%20effects%20of%20different%20normalizations-4.png)<!-- -->
 
 ``` r
+# The normalization reference set read by the model-fitting documents is provided as
+# Data/XLA_Norm/XLA-O18_YolkNormSet_T8-NYS-Decay.csv. Re-running this chunk writes the
+# candidate list to a separate file.
 write.csv(data.frame(Protein_ID=stable_proteins),
-          "Data/XLA_Norm/XLA-O18_YolkNormSet_T8-NYS-Decay.csv",
+          "Data/XLA_Norm/XLA-O18_YolkNormSet_T8-NYS-Decay_candidates.csv",
           row.names=FALSE)
 
 write.csv(GB_YolkNorm_Merge,
