@@ -455,6 +455,7 @@ human_GO_ref[1]
 
 ``` r
 # Run enrichment
+set.seed(123)   # reproducible fgsea permutations
 res <- fgseaMultilevel(
   pathways = human_GO_ref, #Human GO
   stats    = protein_stats,

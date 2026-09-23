@@ -357,6 +357,7 @@ fly_GO_ref[1]
 
 ``` r
 # Run enrichment
+set.seed(123)   # reproducible fgsea permutations
 res <- fgseaMultilevel(
   pathways = fly_GO_ref,
   stats    = protein_stats,

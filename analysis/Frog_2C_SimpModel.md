@@ -1049,6 +1049,7 @@ dyn_model_pep_fit <- function(row, l_time, h_time, heavy_header) {
 ``` r
 #Setup cluster
 cl <- makeCluster(num_cores)
+clusterSetRNGStream(cl, 123)   # reproducible permutation null
 
 #Export necessary variables/functions to the cluster nodes
 clusterExport(cl,
