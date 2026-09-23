@@ -521,6 +521,7 @@ supp_df <- merge(human_map, supp_df[c("Ind_Protein_ID", "iBAQ_Conc_uM")],
                  by.x="Protein_ID", by.y="Ind_Protein_ID") %>%
   arrange(desc(iBAQ_Conc_uM))
 
+dir.create("Files/Supp_Tables", showWarnings = FALSE, recursive = TRUE)
 write.csv(supp_df, "Files/Supp_Tables/Frog_Start-AbsQ_Supplementary_Table.csv",
           row.names = FALSE)
 
@@ -535,6 +536,7 @@ supp_df <- merge(Dmel.genes, supp_df[c("Ind_Protein_ID", "iBAQ_Conc_uM")],
                  by.x="Protein_ID", by.y="Ind_Protein_ID") %>%
   arrange(desc(iBAQ_Conc_uM))
 
+dir.create("Files/Supp_Tables", showWarnings = FALSE, recursive = TRUE)
 write.csv(supp_df, "Files/Supp_Tables/Fly_Start-AbsQ_Supplementary_Table.csv",
           row.names = FALSE)
 

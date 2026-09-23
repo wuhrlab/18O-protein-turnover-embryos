@@ -740,7 +740,7 @@ filter_raw <- function(csv.file) {
 
 ``` r
 #'*MBT Timeseries Replicate 1*
-XLA_T9.df <- filter_raw("Data/XLA_O18_MBT/XLA-O18-T9_RTS-18plex_Fractionated.csv")
+XLA_T9.df <- filter_raw("Data/XLA_O18/XLA-O18-T9_RTS-18plex_Fractionated.csv")
 ```
 
     ## Reading XLA-O18-T9_RTS-18plex_Fractionated.csv ...
@@ -760,7 +760,7 @@ colnames(XLA_T9.df) <- c("Protein_ID", "Peptide",
                          "O10", "O11", "N2", "N4", "N6", "N8", "N10", "N11", "sum_sn")
 
 #'*MBT Timeseries Replicate 2*
-XLA_T10.df <- filter_raw("Data/XLA_O18_MBT/XLA-O18-T10_RTS-18plex_Fractionated.csv")
+XLA_T10.df <- filter_raw("Data/XLA_O18/XLA-O18-T10_RTS-18plex_Fractionated.csv")
 ```
 
     ## Reading XLA-O18-T10_RTS-18plex_Fractionated.csv ...
@@ -1019,7 +1019,7 @@ res.p <- ggplot() +
         legend.position = "none") +
   coord_cartesian(ylim=c(0,1), xlim=c(0,6))
 
-write.csv(median_pep_residues, "Files/AA_examples/Median_Gast_residue-prob.csv",
+write.csv(median_pep_residues, "Files/Fits/AA_examples/Median_Gast_residue-prob.csv",
           row.names = FALSE)
 
 # #Uncomment for new image!

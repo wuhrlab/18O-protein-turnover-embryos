@@ -62,8 +62,8 @@ head(shared_theo_peps)
     ## 6                 AAADIAENK         1 0.02711900          1 0.06110995
 
 ``` r
-median_2cell_residues <- read.csv("Files/AA_examples/Median_2cell_residue-prob.csv")
-median_gast_residues <- read.csv("Files/AA_examples/Median_Gast_residue-prob.csv")
+median_2cell_residues <- read.csv("Files/Fits/AA_examples/Median_2cell_residue-prob.csv")
+median_gast_residues <- read.csv("Files/Fits/AA_examples/Median_Gast_residue-prob.csv")
 
 
 ex.p <- ggplot() +

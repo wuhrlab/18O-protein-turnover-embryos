@@ -56,8 +56,8 @@ head(shared_theo_peps)
 
 ```{r Comparing 2C and gastrulation residue probabilties }
 
-median_2cell_residues <- read.csv("Files/AA_examples/Median_2cell_residue-prob.csv")
-median_gast_residues <- read.csv("Files/AA_examples/Median_Gast_residue-prob.csv")
+median_2cell_residues <- read.csv("Files/Fits/AA_examples/Median_2cell_residue-prob.csv")
+median_gast_residues <- read.csv("Files/Fits/AA_examples/Median_Gast_residue-prob.csv")
 
 
 ex.p <- ggplot() +

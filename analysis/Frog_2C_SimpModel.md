@@ -1809,6 +1809,7 @@ supp_df["Grouped Class"] <- NULL
 supp_df <- rbind(supp_df[!is.na(supp_df$`Reported Half-life (Hrs)`),],
                  supp_df[is.na(supp_df$`Reported Half-life (Hrs)`),])
 
+dir.create("Files/Supp_Tables", showWarnings = FALSE, recursive = TRUE)
 write.csv(supp_df, "Files/Supp_Tables/Frog_2-cell_Supplementary_Table.csv",
           row.names = FALSE)
 ```
@@ -1827,6 +1828,7 @@ norm_export <- norm_export[sample(nrow(norm_export)),][1:3]
 norm_export <- merge(norm_export, protein_annotation,
                      by.x="Protein ID", by.y="Protein_ID")
 
+dir.create("Files/Supp_Tables", showWarnings = FALSE, recursive = TRUE)
 write.csv(norm_export, "Files/Supp_Tables/Norm-Proteins_Supplementary_Table.csv",
           row.names = FALSE)
 ```

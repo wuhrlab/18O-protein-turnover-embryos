@@ -2013,6 +2013,7 @@ supp_df["Grouped Class"] <- NULL
 supp_df <- rbind(supp_df[!is.na(supp_df$`Reported Half-life (Hrs)`),],
                  supp_df[is.na(supp_df$`Reported Half-life (Hrs)`),])
 
+dir.create("Files/Supp_Tables", showWarnings = FALSE, recursive = TRUE)
 write.csv(supp_df, "Files/Supp_Tables/Fly_Gastrulation_Supplementary_Table.csv",
           row.names = FALSE)
 ```
